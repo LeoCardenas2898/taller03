@@ -29,10 +29,10 @@ public class Reto2 extends JFrame{
 		contenedor.setLayout(new FlowLayout());
 		contenedor.add(bt1);
 		contenedor.add(bt2);
-		setSize(300, 300);
+		setSize(300, 150);
 		setVisible(true);
 	}
-	
+
 	private class ManejadorBoton implements ActionListener {
 		public void actionPerformed(ActionEvent evento) {
 			if (evento.getSource() == bt1) {
