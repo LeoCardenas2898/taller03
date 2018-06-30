@@ -20,7 +20,7 @@ public class Reto6 extends JFrame {
 	private JButton move, remove;
 	private JScrollPane mov, mov1;
 	private DefaultListModel modelo, modelo2;
-	String lp[] = { "Python", "Java", "C", "C#", "Pascal", "Fortran", "Kotlin","Javascript" };
+	String lp[] = {"Python", "Java", "C", "C#", "Pascal", "Fortran", "Kotlin","JavaScript" };
 
 	public Reto6() {
 		super("Reto 6");
@@ -49,8 +49,8 @@ public class Reto6 extends JFrame {
 				// TODO Auto-generated method stub
 				list2.setListData(list1.getSelectedValues());
 				int[] x1 = list1.getSelectedIndices();
-				for (int i : x1) {
-					modelo.remove(i);
+				for (int i=x1.length-1; i>=0; i--) {
+					modelo.remove(x1[i]);
 				}
 			}
 		});
@@ -60,8 +60,6 @@ public class Reto6 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				list1.setListData(list2.getSelectedValues());
-				int[] x2 = list2.getSelectedIndices();
-				System.out.println(Arrays.toString(x2));
 			}
 		});
 
@@ -71,7 +69,6 @@ public class Reto6 extends JFrame {
 		contenedor.add(mov1);
 		this.setSize(600, 300);
 		this.setVisible(true);
-
 	}
 
 	public static void main(String[] args) {
